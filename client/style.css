@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.toolbar {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
+    gap: 15px;
+    align-items: center;
+}
+
+.toolbar label {
+    font-weight: bold;
+}
+
+.toolbar input[type="color"] {
+    width: 40px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.toolbar button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e9e9e9;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background-color: #ddd;
+}
+
+/* Styles for tool buttons and active state */
+.toolbar .tool-btn.active {
+    background-color: #a0cfff;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.toolbar .divider {
+    width: 1px;
+    height: 25px;
+    background-color: #ccc;
+    margin: 0 5px;
+}
+
+/* NEW: Styles for control groups and hidden class */
+.control-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Space between label and input */
+}
+
+.hidden {
+    display: none;
+}
+/* END NEW */
+
+
+#drawing-canvas {
+    background: #fff;
+    border: 1px solid #999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: crosshair;
+    width: 90vw;  /* 90% of the viewport width */
+    height: 70vh; /* 70% of the viewport height */
+}

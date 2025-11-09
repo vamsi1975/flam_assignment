@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Real-Time Canvas</h1>
+    
+    <div class="toolbar">
+        <label>Tools:</label>
+        <button id="tool-brush" class="tool-btn active" title="Brush">Brush</button>
+        <button id="tool-rect" class="tool-btn" title="Rectangle">Rect</button>
+        <button id="tool-circle" class="tool-btn" title="Circle">Circle</button>
+        <button id="tool-line" class="tool-btn" title="Line">Line</button>
+        <button id="tool-fill" class="tool-btn" title="Fill">Fill</button>
+        <button id="tool-eraser" class="tool-btn" title="Eraser">Eraser</button>
+        
+        <div class="divider"></div>
+
+        <span id="color-control" class="control-group">
+            <label for="color">Color:</label>
+            <input type="color" id="color" value="#000000">
+        </span>
+        
+        <span id="width-control" class="control-group">
+            <label for="strokeWidth">Width:</label>
+            <input type="range" id="strokeWidth" min="1" max="50" value="5"> </span>
+        
+        <span id="style-control" class="control-group">
+            <label for="lineStyle">Style:</label>
+            <select id="lineStyle">
+                <option value="solid">Solid</option>
+                <option value="dashed">Dashed</option>
+                <option value="dotted">Dotted</option>
+            </select>
+        </span>
+        
+        <div class="divider"></div>
+
+        <button id="undo" title="Undo">Undo</button>
+        <button id="redo" title="Redo">Redo</button>
+        <button id="clear" title="Clear">Clear</button>
+    </div>
+
+    <canvas id="drawing-canvas"></canvas>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="canvas.js"></script>
+    <script src="websocket.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
