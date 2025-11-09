@@ -12,7 +12,7 @@ This is a multi-user drawing application where multiple people can draw simultan
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
+    git clone https://github.com/vamsi1975/flam_assignment.git
     cd collaborative-canvas
     ```
 
